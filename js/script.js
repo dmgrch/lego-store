@@ -7,8 +7,12 @@ const cartCount = document.querySelector(".cart-button__count");
 const cartMessage = document.querySelector(".cart__message");
 const productButtons = document.querySelectorAll(".product-card__button");
 
-let cart = [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let messageTimer;
+
+function saveCart() {
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
 
 function openCart() {
     cartOverlay.classList.add("cart-overlay--open");
@@ -118,6 +122,7 @@ function addToCart(button) {
         cart.push(product);
     }
 
+    saveCart();
     renderCart();
     showAddedMessage();
     openCart();
@@ -136,12 +141,14 @@ function changeQuantity(id, change) {
         cart = cart.filter((product) => product.id !== id);
     }
 
+    saveCart();
     renderCart();
 }
 
 function removeFromCart(id) {
     cart = cart.filter((product) => product.id !== id);
 
+    saveCart();
     renderCart();
 }
 
@@ -188,3 +195,5 @@ document.addEventListener("keydown", (event) => {
         closeCart();
     }
 });
+
+renderCart();
