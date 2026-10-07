@@ -11,16 +11,209 @@
 
 <body>
 
-    <header>
-        <h1>LEGO Store</h1>
+    <header class="header">
+        <div class="container">
+            <h1 class="header__title">LEGO Store</h1>
+
+            <nav class="nav">
+                <a href="#catalog">Каталог</a>
+                
+                <button class="cart-button" type="button">
+                🛒
+                <span class="cart-button__text">Корзина</span>
+                <span class="cart-button__count">0</span>
+                </button>
+            
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <p>Добро пожаловать в LEGO Store!</p>
+    <main class="main">
+        <div class="container main__content">
+
+            <section class="catalog" id="catalog">
+                <h2>Каталог</h2>
+
+                <div class="products">
+
+                    <article class="product-card">
+                        <h3>Счастливые растения</h3>
+
+                        <p class="product-card__description">
+                            Этот набор, наполненный очаровательными деталями, позволяет девочкам и мальчикам проявить творческие способности, собирая 2 радостных растения LEGO.                        </p>
+
+                        <p class="product-card__price">
+                            2 899 ₽
+                        </p>
+
+                        <button
+                            class="product-card__button"
+                            type="button"
+                            data-id="1"
+                            data-name="Счастливые растения"
+                            data-price="2899"
+                        >
+                            Добавить в корзину
+                        </button>
+                    </article>
+
+
+                    <article class="product-card">
+                        <h3>Собор Парижской Богоматери</h3>
+
+                        <p class="product-card__description">
+                            Эта модель здания отправит вас в историческое путешествие по истории собора, начиная с 1163 года, когда был заложен первый камень, посредством ремонтных работ архитектора Виоле-ле-Дюка в 19 веке, до величественного облика Нотр-Дама перед пожаром 2019 года.
+                        </p>
+
+                        <p class="product-card__price">
+                            42 999 ₽
+                        </p>
+
+                        <button
+                            class="product-card__button"
+                            type="button"
+                            data-id="2"
+                            data-name="Собор Парижской Богоматери"
+                            data-price="42999"
+                        >
+                            Добавить в корзину
+                        </button>
+                    </article>
+
+
+                    <article class="product-card">
+                        <h3>McLaren F1 MP4/4 и Айртон Сенна</h3>
+
+                        <p class="product-card__description">
+                            Эта масштабная копия модели, разработанная в сотрудничестве с McLaren и брендом SENNA, отличается точными деталями, передающими внешний вид легендарного болида 1988 года, считающегося одним из самых успешных гоночных автомобилей Формулы-1 всех времен.
+                        </p>
+
+                        <p class="product-card__price">
+                            15 999 ₽
+                        </p>
+
+                        <button
+                            class="product-card__button"
+                            type="button"
+                            data-id="3"
+                            data-name="McLaren F1 MP4/4 и Айртон Сенна"
+                            data-price="15999"
+                        >
+                            Добавить в корзину
+                        </button>
+                    </article>
+
+
+                    <article class="product-card">
+                        <h3>Эйфелева башня</h3>
+
+                        <p class="product-card__description">
+                            Это не только один из самых высоких наборов LEGO, но и один из самых больших по количеству элементов — 10 001 деталь для захватывающего опыта от начала до конца. Этот набор также лучшая идея подарка любителям путешествий или истории.
+                        </p>
+
+                        <p class="product-card__price">
+                            129 999 ₽
+                        </p>
+
+                        <button
+                            class="product-card__button"
+                            type="button"
+                            data-id="4"
+                            data-name="Эйфелева башня"
+                            data-price="129999"
+                        >
+                            Добавить в корзину
+                        </button>
+                    </article>
+
+
+                    <article class="product-card">
+                        <h3>Бонсай</h3>
+
+                        <p class="product-card__description">
+                            Эта модель для сборки — замечательный способ наполнить свой день покоем и безмятежностью.
+                        </p>
+
+                        <p class="product-card__price">
+                            10 799 ₽
+                        </p>
+
+                        <button
+                            class="product-card__button"
+                            type="button"
+                            data-id="5"
+                            data-name="Бонсай"
+                            data-price="10799"
+                        >
+                            Добавить в корзину
+                        </button>
+                    </article>
+
+
+                    <article class="product-card">
+                        <h3>Барад-дур</h3>
+
+                        <p class="product-card__description">
+                            Этот впечатляющий набор памятных вещей из фильма «Властелин колец» переполнен функциями, которые понравятся фанатам, и изображает зловещую крепость с ее парящей башней, возвышающей Око Саурона высоко над Средиземьем.
+                        </p>
+
+                        <p class="product-card__price">
+                            104 999 ₽
+                        </p>
+
+                        <button
+                            class="product-card__button"
+                            type="button"
+                            data-id="6"
+                            data-name="Барад-дур"
+                            data-price="104999"
+                        >
+                            Добавить в корзину
+                        </button>
+                    </article>
+
+                </div>
+            </section>
+
+        </div>
     </main>
 
-    <footer>
-        <p>LEGO Store</p>
+    <div class="cart-overlay">
+        <aside class="cart">
+            <div class="cart__header">
+                <h2>Корзина</h2>
+
+                <button class="cart__close" type="button">
+                    ×
+                </button>
+            </div>
+
+            <p class="cart__message">
+                Товар успешно добавлен в корзину!
+            </p>
+
+            <div class="cart__items">
+                <p>Корзина пока пуста.</p>
+            </div>
+
+            <div class="cart__footer">
+                <p>
+                    Итого:
+                    <strong class="cart__total">0 ₽</strong>
+                </p>
+
+                <button class="cart__checkout" type="button">
+                    Оформить заказ
+                </button>
+            </div>
+        </aside>
+    </div>
+
+
+    <footer class="footer">
+        <div class="container">
+            <p>LEGO Store — Интернет магазин коллекционных наборов LEGO!</p>
+        </div>
     </footer>
 
     <script src="js/script.js"></script>
