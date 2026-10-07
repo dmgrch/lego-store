@@ -247,6 +247,64 @@
         </aside>
     </div>
 
+    <div class="checkout-overlay">
+        <div class="checkout-modal">
+            <div class="checkout-modal__header">
+                <h2>Оформление заказа</h2>
+
+                <button class="checkout-modal__close" type="button">
+                    X
+                </button>
+            </div>
+
+            <form class="checkout-form">
+                <label class="checkout-form__field">
+                    <span>Имя</span>
+                    <input
+                        type="text"
+                        name="firstName"
+                        required
+                    >
+                </label>
+
+                <label class="checkout-form__field">
+                    <span>Фамилия</span>
+                    <input
+                        type="text"
+                        name="lastName"
+                        required
+                    >
+                </label>
+
+                <label class="checkout-form__field">
+                    <span>Адрес доставки</span>
+                    <input
+                        type="text"
+                        name="address"
+                        required
+                    >
+                </label>
+
+                <label class="checkout-form__field">
+                    <span>Контактный номер телефона</span>
+                    <input
+                        type="tel"
+                        name="phone"
+                        required
+                    >
+                </label>
+
+                <button class="checkout-form__submit" type="submit">
+                    Создать заказ
+                </button>
+            </form>
+
+            <p class="checkout-modal__success">
+                Заказ создан!
+            </p>
+        </div>
+    </div>
+
 
     <footer class="footer">
         <div class="container">
